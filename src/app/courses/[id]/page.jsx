@@ -1,0 +1,118 @@
+import { getSingleCourse } from "@/app/actions/server/course";
+import { IoStar } from "react-icons/io5";
+export default async function CourseDetails({ params }) {
+  const { id } = await params;
+  const course = await getSingleCourse(id);
+  console.log(course);
+  return (
+    <div className="bg-base-200 min-h-screen py-10">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {/* Left Content */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Hero */}
+          <div className="bg-base-100 rounded-2xl shadow-lg overflow-hidden">
+            <img
+              src={course.thumbnail}
+              alt={course.title}
+              className="w-full h-72 object-cover"
+            />
+            <div className="p-6">
+              <span className="inline-block mb-3 bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full">
+                {course.category}
+              </span>
+              <h1 className="text-3xl font-bold text-neutral mb-3">
+                {course.title}
+              </h1>
+              <p className="text-secondary leading-relaxed">
+                {course.description}
+              </p>
+            </div>
+          </div>
+
+          {/* Course Info Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { label: "Duration", value: course.duration },
+              { label: "Level", value: course.level },
+              {
+                label: "Rating",
+                value: (
+                  <span className="flex items-center justify-center gap-1">
+                    {course.rating}
+                    <IoStar className="text-yellow-400 text-sm" />
+                  </span>
+                ),
+              },
+              { label: "Students", value: `${course.students}+` },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-base-100 rounded-xl shadow p-4 text-center"
+              >
+                <p className="text-sm text-secondary mb-1">{item.label}</p>
+                <p className="text-lg font-semibold text-neutral">
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Instructor Section */}
+          <div className="bg-base-100 rounded-2xl shadow p-6 flex flex-col sm:flex-row items-center gap-6">
+            <img
+              src={course.instructor.avatar}
+              alt={course.instructor.name}
+              className="w-20 h-20 rounded-full object-cover border-4 border-accent"
+            />
+            <div>
+              <h3 className="text-xl font-semibold text-neutral">
+                {course.instructor.name}
+              </h3>
+              <p className="text-secondary mb-2">{course.instructor.title}</p>
+              <p className="text-sm text-secondary">
+                Expert instructor with real-world experience in analytics and
+                business intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Sidebar */}
+        <div className="bg-base-100 rounded-2xl shadow-lg p-6 h-fit sticky top-24 space-y-6">
+          {/* Price Box */}
+          <div className="text-center space-y-2">
+            <div className="flex justify-center items-center gap-3">
+              <span className="text-3xl font-bold text-primary">
+                ৳{course.discountPrice}
+              </span>
+              <span className="line-through text-secondary">
+                ৳{course.price}
+              </span>
+            </div>
+            <p className="text-sm text-success font-medium">
+              Save ৳{course.price - course.discountPrice}
+            </p>
+          </div>
+
+          {/* Enroll Button */}
+          <button className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
+            Enroll Now
+          </button>
+
+          {/* Course Highlights */}
+          <div className="border-t pt-4 space-y-3">
+            <h4 className="font-semibold text-neutral">
+              This course includes:
+            </h4>
+            <ul className="text-sm text-secondary space-y-2">
+              <li>✔ Lifetime access</li>
+              <li>✔ Certificate of completion</li>
+              <li>✔ Practical projects</li>
+              <li>✔ Expert support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
