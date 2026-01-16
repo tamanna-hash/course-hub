@@ -1,5 +1,42 @@
 import { getSingleCourse } from "@/app/actions/server/course";
 import { IoStar } from "react-icons/io5";
+export async function generateMetadata({ params }) {
+  const { id } = params;
+  const course = await getSingleCourse(id);
+
+  if (!course) {
+    return {
+      title: "Course Not Found | CourseHub",
+    };
+  }
+
+  return {
+    title: `${course.title} | CourseHub`,
+    description: course.description,
+    openGraph: {
+      title: `${course.title} | CourseHub`,
+      description: course.description,
+      url: `https://yourwebsite.com/courses/${course.slug}`,
+      images: [
+        {
+          url: "https://i.ibb.co.com/S4GMDKtC/Screenshot-2026-01-16-214612.png",
+          width: 1200,
+          height: 630,
+          alt: course.title,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: course.title,
+      description: course.description,
+      images: [
+        "https://i.ibb.co.com/S4GMDKtC/Screenshot-2026-01-16-214612.png",
+      ],
+    },
+  };
+}
 export default async function CourseDetails({ params }) {
   const { id } = await params;
   const course = await getSingleCourse(id);
