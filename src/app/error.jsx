@@ -12,12 +12,12 @@ const error = () => {
       <p className="text-secondary mb-6">
         An unexpected error has occurred. Please try again.
       </p>
-      <Link
+      {/* <Link
        href={"/"}
         className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-accent transition"
       >
         Back To Home
-      </Link>
+      </Link> */}
     </div>
     );
 };

@@ -68,7 +68,7 @@ const CoursesClient = ({ courses }) => {
         </div>
 
         {/* Title Section */}
-        <motion.div variants={itemVariants} className="relative z-10 mb-8">
+        <motion.div variants={itemVariants} className="relative mt-4 z-10 mb-8">
           <motion.div
             className="inline-flex items-center gap-2 bg-blue-100/50 dark:bg-blue-900/30 backdrop-blur-sm rounded-full px-4 py-2 mb-4"
             animate={{
@@ -85,7 +85,7 @@ const CoursesClient = ({ courses }) => {
           </motion.div>
 
           <motion.h1 
-            className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 leading-tight"
+            className="text-3xl md:text-4xl font-bold text-base-content/90 dark:text-white mb-3 leading-tight"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}

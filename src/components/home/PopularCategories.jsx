@@ -125,7 +125,7 @@ const PopularCategories = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 relative overflow-hidden">
+    <section className="py-20 bg-base-100 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -165,7 +165,7 @@ const PopularCategories = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-base-content/90 dark:text-white mb-4"
           >
             Explore by{" "}
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">

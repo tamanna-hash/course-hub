@@ -111,7 +111,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900/20 relative overflow-hidden">
+    <section className="py-20 bg-base-100 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -151,7 +151,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-base-content/90 dark:text-white mb-4"
           >
             What Our{" "}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">

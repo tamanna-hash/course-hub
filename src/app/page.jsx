@@ -98,7 +98,7 @@ export default async function Home() {
     : courses.slice(0, 4);
 
   return (
-    <>
+    <div className="bg-white dark:bg-gray-900 min-h-screen">
       <Banner />
       <HowItWorks />
       <PopularCategories />
@@ -106,6 +106,6 @@ export default async function Home() {
       <Featured featuredCourses={finalFeaturedCourses} />
       <Testimonials />
       <NewsLetter />
-    </>
+    </div>
   );
 }

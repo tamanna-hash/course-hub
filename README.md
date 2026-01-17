@@ -7,7 +7,7 @@
 
 ## 📝 Project Description
 
-CourseHub is a modern online learning platform built with Next.js where users can explore courses, view detailed information, and authenticate securely using credentials or social login. The application focuses on performance, clean UI, and a seamless user experience using the latest web technologies.
+CourseHub is a modern online learning platform built with Next.js that allows users to explore and join courses easily. Users can view detailed course information, including instructors, duration, price, and ratings. The platform offers secure authentication through credentials or social login, ensuring a seamless experience. CourseHub emphasizes performance, a clean and responsive UI, and an intuitive user experience, leveraging the latest web technologies like NextAuth.js and Tailwind CSS to create a polished and modern learning environment.
 
 ---
 

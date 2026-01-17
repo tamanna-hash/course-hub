@@ -213,7 +213,7 @@ const NewsLetter = () => {
                 <motion.button
                   type="submit"
                   disabled={isLoading || !email}
-                  className="px-6 py-3 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-semibold hover:bg-white/90 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white/50 dark:focus:ring-gray-400/50 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   whileHover={{ scale: isLoading ? 1 : 1.05 }}
                   whileTap={{ scale: isLoading ? 1 : 0.95 }}
                 >
