@@ -58,7 +58,7 @@ export default async function CourseDetails({ params }) {
               <span className="inline-block mb-3 bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full">
                 {course.category}
               </span>
-              <h1 className="text-3xl font-bold text-neutral mb-3">
+              <h1 className="text-3xl font-bold  mb-3">
                 {course.title}
               </h1>
               <p className="text-secondary leading-relaxed">
@@ -88,7 +88,7 @@ export default async function CourseDetails({ params }) {
                 className="bg-base-100 rounded-xl shadow p-4 text-center"
               >
                 <p className="text-sm text-secondary mb-1">{item.label}</p>
-                <p className="text-lg font-semibold text-neutral">
+                <p className="text-lg font-semibold ">
                   {item.value}
                 </p>
               </div>
@@ -103,7 +103,7 @@ export default async function CourseDetails({ params }) {
               className="w-20 h-20 rounded-full object-cover border-4 border-accent"
             />
             <div>
-              <h3 className="text-xl font-semibold text-neutral">
+              <h3 className="text-xl font-semibold ">
                 {course.instructor?.name}
               </h3>
               <p className="text-secondary mb-2">{course.instructor?.title}</p>
@@ -137,7 +137,7 @@ export default async function CourseDetails({ params }) {
 
           {/* Course Highlights */}
           <div className="border-t pt-4 space-y-3">
-            <h4 className="font-semibold text-neutral">
+            <h4 className="font-semibold ">
               This course includes:
             </h4>
             <ul className="text-sm text-secondary space-y-2">
