@@ -1,9 +1,10 @@
 import { getSingleCourse } from "@/app/actions/server/course";
+import EnrollButton from "@/components/buttons/EnrollButton";
 import { IoStar } from "react-icons/io5";
 export async function generateMetadata({ params }) {
-  const { id } = params;
-  const course = await getSingleCourse(id);
-
+  const { id } = await params;
+  const course = (await getSingleCourse(id));
+console.log(course);
   if (!course) {
     return {
       title: "Course Not Found | CourseHub",
@@ -97,15 +98,15 @@ export default async function CourseDetails({ params }) {
           {/* Instructor Section */}
           <div className="bg-base-100 rounded-2xl shadow p-6 flex flex-col sm:flex-row items-center gap-6">
             <img
-              src={course.instructor.avatar}
-              alt={course.instructor.name}
+              src={course.instructor?.avatar}
+              alt={course.instructor?.name}
               className="w-20 h-20 rounded-full object-cover border-4 border-accent"
             />
             <div>
               <h3 className="text-xl font-semibold text-neutral">
-                {course.instructor.name}
+                {course.instructor?.name}
               </h3>
-              <p className="text-secondary mb-2">{course.instructor.title}</p>
+              <p className="text-secondary mb-2">{course.instructor?.title}</p>
               <p className="text-sm text-secondary">
                 Expert instructor with real-world experience in analytics and
                 business intelligence.
@@ -132,9 +133,7 @@ export default async function CourseDetails({ params }) {
           </div>
 
           {/* Enroll Button */}
-          <button className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
-            Enroll Now
-          </button>
+          <EnrollButton course={course} />
 
           {/* Course Highlights */}
           <div className="border-t pt-4 space-y-3">

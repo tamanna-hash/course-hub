@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import NextAuthProvider from "@/provider/NextAuthProvider";
 const inter = Inter({
   weight: ["100", "200", "300", "500", "600", "800"],
 });
@@ -45,23 +46,23 @@ export const metadata = {
     title: "CourseHub | Learn AI, Web Development & More",
     description:
       "Join CourseHub to explore online courses in AI, Web Development, Business Analytics, and more.",
-    images: [
-      "https://i.ibb.co.com/K8xhKYZ/Screenshot-2026-01-16-214408.png",
-    ],
+    images: ["https://i.ibb.co.com/K8xhKYZ/Screenshot-2026-01-16-214408.png"],
     creator: "@your_twitter_handle",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <header className="max-w-11/12 mx-auto">
-          <Navbar />
-        </header>
-        <main className="max-w-11/12 mx-auto min-h-screen">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <NextAuthProvider>
+      <html lang="en">
+        <body className={`${inter.className} antialiased`}>
+          <header className="max-w-11/12 mx-auto">
+            <Navbar />
+          </header>
+          <main className="max-w-11/12 mx-auto min-h-screen">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </NextAuthProvider>
   );
 }

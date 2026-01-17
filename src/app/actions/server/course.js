@@ -10,6 +10,9 @@ export const getSingleCourse = async (id) => {
     return {};
   }
   const query = { _id: new ObjectId(id) };
-  const course = (await dbConnect(collections.COURSES)).findOne(query);
-  return course || {};
+  
+  const collection = await dbConnect(collections.COURSES);
+  const course = await collection.findOne({ _id: new ObjectId(id) });
+  // const course = (await dbConnect(collections.COURSES)).findOne(query);
+  return { ...course, _id: course._id.toString() } || {};
 };

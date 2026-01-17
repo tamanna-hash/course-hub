@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../shared/Logo";
 import NavLink from "../buttons/NavLink";
 import Link from "next/link";
+import AuthButtons from "../buttons/AuthButtons";
 
 const Navbar = () => {
   const navlinks = (
@@ -57,7 +58,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href={"/login"} className="btn btn-primary btn-outline">Login</Link>
+        <AuthButtons/>
       </div>
     </div>
   );
