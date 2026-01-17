@@ -2,12 +2,13 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import SocialButtons from "../buttons/SocialButtons";
 import { postUser } from "@/app/actions/server/auth";
 
 const RegisterForm = () => {
+    const router = useRouter()
   const params = useSearchParams();
   const callbackUrl = params.get("callbackUrl") || "/";
   console.log(params, callbackUrl);
@@ -28,9 +29,11 @@ const RegisterForm = () => {
       const result = await signIn("credentials", {
         email: form.email,
         password: form.password,
+        redirect:false,
         callbackUrl: callbackUrl,
       });
       if (result.ok) {
+        router.push(callbackUrl)
         Swal.fire("success", "Welcome to CourseHub", "success");
       } else {
         Swal.fire("error", "Sorry Error Occurred", "error");

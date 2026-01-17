@@ -3,9 +3,12 @@ import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import NextAuthProvider from "@/provider/NextAuthProvider";
+import BackToTop from "@/components/shared/BackToTop";
+
 const inter = Inter({
   weight: ["100", "200", "300", "500", "600", "800"],
 });
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -54,13 +57,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <NextAuthProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={`${inter.className} antialiased`}>
           <header className="max-w-11/12 mx-auto">
             <Navbar />
           </header>
           <main className="max-w-11/12 mx-auto min-h-screen">{children}</main>
           <Footer />
+          <BackToTop />
         </body>
       </html>
     </NextAuthProvider>

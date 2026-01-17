@@ -3,6 +3,7 @@ import Logo from "../shared/Logo";
 import NavLink from "../buttons/NavLink";
 import Link from "next/link";
 import AuthButtons from "../buttons/AuthButtons";
+import Theme from "../shared/Theme";
 
 const Navbar = () => {
   const navlinks = (
@@ -19,14 +20,17 @@ const Navbar = () => {
       <li>
         <NavLink href={"/contact"}>Contact</NavLink>
       </li>
+      <li>
+        <NavLink href={"/blog"}>Blog</NavLink>
+      </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar bg-base-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-gray-700 dark:text-gray-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -45,7 +49,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-800 rounded-box z-[1] mt-3 w-52 p-2 shadow border border-gray-200 dark:border-gray-600"
           >
             {navlinks}
           </ul>
@@ -58,6 +62,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <Theme/>
         <AuthButtons/>
       </div>
     </div>

@@ -2,7 +2,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { loginUser } from "@/app/actions/server/auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { collections, dbConnect } from "./dbConnect";
-const collection = await dbConnect(collections.USERS)
+const collection = await dbConnect(collections.USERS);
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
@@ -30,7 +30,7 @@ export const authOptions = {
       console.log({ user, account, profile, email, credentials });
       const isExist = await collection.findOne({
         email: user.email,
-        provider: account?.provider,
+        // provider: account?.provider,
       });
       if (isExist) {
         return true;
@@ -45,5 +45,30 @@ export const authOptions = {
       const result = await collection.insertOne(newUser);
       return result.acknowledged;
     },
+  },
+  // async redirect({ url, baseUrl }) {
+  //   return baseUrl;
+  // },
+  async session({ session, token, user }) {
+    if (token) {
+      (session.role = token?.role), (session.email = token?.email);
+    }
+    return session;
+  },
+  async jwt({ token, user, account, profile, isNewUser }) {
+    if(account.provider="google"){
+      const dbUser = await collection.findOne({
+        email:user.email
+      })
+      token.role= dbUser?.role,
+      token.email = dbUser?.email
+    }
+    else{
+      (token.role = user?.role), (token.email = user?.email);
+    }
+    if (user) {
+      (token.role = user?.role), (token.email = user?.email);
+    }
+    return token;
   },
 };

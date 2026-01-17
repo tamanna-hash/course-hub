@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 CourseHub
 
-## Getting Started
+🔗 Live Site: https://course-hub-ashy.vercel.app  
+🔗 GitHub Repository: https://github.com/tamanna-hash/course-hub  
 
-First, run the development server:
+---
 
-```bash
+## 📝 Project Description
+
+CourseHub is a modern online learning platform built with Next.js where users can explore courses, view detailed information, and authenticate securely using credentials or social login. The application focuses on performance, clean UI, and a seamless user experience using the latest web technologies.
+
+---
+
+## 🚀 Setup & Installation
+
+1. Visit the GitHub repository: https://github.com/tamanna-hash/course-hub  
+2. Clone the repository.  
+3. Run the project using:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open your browser and go to: http://localhost:3000  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧭 Route Summary
 
-## Learn More
+| Route | Description |
+|-------|-------------|
+| / | Home page |
+| /courses | Courses listing page |
+| /courses/[slug] | Course details page |
+| /login | User login page |
+| /register | User registration page |
+| /api/auth/* | Authentication routes (NextAuth.js) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Implemented Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Secure user authentication (Credentials & Google login)
+- Course listing with responsive cards
+- Detailed course pages with full information
+- Protected routes using NextAuth.js
+- MongoDB database integration
+- Responsive UI built with Tailwind CSS
+- Fast rendering using Next.js App Router
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔍 Feature Explanation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication: Users can sign in using email/password or Google OAuth through NextAuth.js.  
+Course Management: Courses are fetched from a MongoDB database and displayed using elegant card components.  
+Course Details: Each course has a dedicated page showing title, price, instructor, duration, rating, and more.  
+Security: Passwords are securely hashed using bcrypt and sessions are safely managed.  
+Responsive Design: Tailwind CSS ensures a mobile-first, responsive layout across all devices.
+
+---
+
+## 🛠 Technologies Used
+
+- Next.js (App Router)
+- NextAuth.js
+- MongoDB
+- Tailwind CSS
+- React
+- bcrypt
+- Vercel
+
+---
+
+## 🌍 Live Demo
+
+https://course-hub-ashy.vercel.app
+
+---
+
+## 👩‍💻 Author
+
+Developed by Tamanna  
+GitHub: https://github.com/tamanna-hash  
+
+---
+
+⭐ If you like this project, feel free to give it a star!

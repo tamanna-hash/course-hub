@@ -1,12 +1,15 @@
+import Logo from "../shared/Logo";
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200  py-10">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-200 dark:text-gray-300 py-10">
       <div className="mx-auto max-w-11/12 flex flex-col md:flex-row justify-between gap-10">
         
         {/* Logo & Description */}
         <div className="flex-1">
-          <h1 className="text-lg font-bold text-primary mb-2">CourseHub</h1>
-          <p className="text-gray-400">
+          <Logo/>
+          <p className="text-gray-400 dark:text-gray-500">
             Learn, grow, and level up your skills with top-notch online courses.
           </p>
         </div>
@@ -14,36 +17,38 @@ export default function Footer() {
         {/* Links */}
         <div className="flex-1 flex justify-between">
           <div>
-            <h2 className="font-semibold text-gray-300 mb-2">Courses</h2>
-            <ul className="space-y-1 text-gray-400">
-              <li><a href="#" className="hover:text-sky-400">Web Development</a></li>
-              <li><a href="#" className="hover:text-sky-400">AI & ML</a></li>
-              <li><a href="#" className="hover:text-sky-400">Design</a></li>
-              <li><a href="#" className="hover:text-sky-400">Marketing</a></li>
+            <h2 className="font-semibold text-gray-300 dark:text-gray-200 mb-2">Courses</h2>
+            <ul className="space-y-1 text-gray-400 dark:text-gray-500">
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">All Courses</Link></li>
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Web Development</Link></li>
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">AI & ML</Link></li>
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Design</Link></li>
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Marketing</Link></li>
             </ul>
           </div>
           <div>
-            <h2 className="font-semibold text-gray-300 mb-2">Company</h2>
-            <ul className="space-y-1 text-gray-400">
-              <li><a href="#" className="hover:text-sky-400">About Us</a></li>
-              <li><a href="#" className="hover:text-sky-400">Contact</a></li>
-              <li><a href="#" className="hover:text-sky-400">Careers</a></li>
-              <li><a href="#" className="hover:text-sky-400">Blog</a></li>
+            <h2 className="font-semibold text-gray-300 dark:text-gray-200 mb-2">Company</h2>
+            <ul className="space-y-1 text-gray-400 dark:text-gray-500">
+              <li><Link href="/about" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Contact</Link></li>
+              <li><Link href="/blog" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Blog</Link></li>
+              <li><Link href="/courses" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Careers</Link></li>
             </ul>
           </div>
           <div>
-            <h2 className="font-semibold text-gray-300 mb-2">Support</h2>
-            <ul className="space-y-1 text-gray-400">
-              <li><a href="#" className="hover:text-sky-400">Help Center</a></li>
-              <li><a href="#" className="hover:text-sky-400">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-sky-400">Privacy Policy</a></li>
+            <h2 className="font-semibold text-gray-300 dark:text-gray-200 mb-2">Support</h2>
+            <ul className="space-y-1 text-gray-400 dark:text-gray-500">
+              <li><Link href="/contact" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Help Center</Link></li>
+              <li><Link href="/about" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/contact" className="hover:text-sky-400 dark:hover:text-sky-300 transition-colors">Support</Link></li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+      <div className="border-t border-gray-700 dark:border-gray-800 mt-10 pt-6 text-center text-gray-500 dark:text-gray-600 text-sm">
         &copy; {new Date().getFullYear()} CourseHub. All rights reserved.
       </div>
     </footer>
