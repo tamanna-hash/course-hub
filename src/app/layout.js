@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
           <header className="max-w-11/12 mx-auto">
             <Navbar />
           </header>
-          <main className="max-w-11/12 mx-auto min-h-screen">{children}</main>
+          <main className="max-w-11/12 mx-auto mt-17 min-h-screen">{children}</main>
           <Footer />
           <BackToTop />
         </body>

@@ -14,8 +14,9 @@ const EnrollButton = ({ course }) => {
       router.push(`/login?callbackUrl=${path}`);
     }
   };
+  // onClick={handleEnroll}
   return (
-    <button onClick={handleEnroll} className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
+    <button className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
       Enroll Now
     </button>
   );

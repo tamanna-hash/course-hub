@@ -100,10 +100,10 @@ export default async function Home() {
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen">
       <Banner />
-      <HowItWorks />
       <PopularCategories />
-      <Instructors instructorsData={instructorsData} />
       <Featured featuredCourses={finalFeaturedCourses} />
+      <HowItWorks />
+      <Instructors instructorsData={instructorsData} />
       <Testimonials />
       <NewsLetter />
     </div>

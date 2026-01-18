@@ -4,7 +4,6 @@ import { IoStar } from "react-icons/io5";
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const course = (await getSingleCourse(id));
-console.log(course);
   if (!course) {
     return {
       title: "Course Not Found | CourseHub",
