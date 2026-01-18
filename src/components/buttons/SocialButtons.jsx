@@ -21,7 +21,7 @@ const SocialButtons = () => {
     <div>
       <button
         onClick={handleSignIn}
-        className="w-full flex items-center justify-center gap-3 py-2.5 mb-5 rounded-full border border-base-300 bg-base-100 text-neutral hover:bg-base-200 transition"
+        className="w-full flex items-center justify-center gap-3 py-2.5 mb-5 rounded-full border border-base-300 bg-base-100 hover:bg-base-200 transition"
       >
         <FcGoogle className="text-xl" />
         Continue with Google
