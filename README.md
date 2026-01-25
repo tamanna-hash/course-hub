@@ -1,4 +1,5 @@
 # 📚 CourseHub
+<img src="https://i.ibb.co.com/r2cWzWBk/club-sphere.png" height="300px" width="400px">
 <img src="https://i.ibb.co.com/vxwY3Q05/course-Hub.png" width="400" height="300" alt="CourseHub">
 
 🔗 Live Site: https://course-hub-ashy.vercel.app  
