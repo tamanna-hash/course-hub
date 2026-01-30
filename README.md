@@ -1,5 +1,6 @@
 # 📚 CourseHub
-<img src="https://i.ibb.co.com/vxwY3Q05/course-Hub.png" width="400" height="300" alt="CourseHub">
+<img src="https://i.ibb.co.com/PsFzB6Z4/course-Hub.png" height="300px" width="400px" alt="CourseHub">
+
 🔗 Live Site: https://course-hub-ashy.vercel.app  
 🔗 GitHub Repository: https://github.com/tamanna-hash/course-hub  
 
