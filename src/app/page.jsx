@@ -98,14 +98,16 @@ export default async function Home() {
     : courses.slice(0, 4);
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
+    <div className="min-h-screen">
       <Banner />
-      <PopularCategories />
+      <div className="max-w-11/12 mx-auto">
+        <PopularCategories />
       <Featured featuredCourses={finalFeaturedCourses} />
       <HowItWorks />
       <Instructors instructorsData={instructorsData} />
       <Testimonials />
       <NewsLetter />
+      </div>
     </div>
   );
 }

@@ -187,12 +187,13 @@ const PopularCategories = () => {
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div
-                className={`relative bg-gradient-to-br ${category.bgGradient} p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/50 backdrop-blur-sm overflow-hidden h-full`}
-                whileHover={{ 
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                }}
-              >
+              <Link href="/courses">
+                <motion.div
+                  className={`relative bg-gradient-to-br ${category.bgGradient} p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/50 backdrop-blur-sm overflow-hidden h-full`}
+                  whileHover={{ 
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  }}
+                >
                 {/* Animated Background Gradient */}
                 <motion.div
                   className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
@@ -273,6 +274,7 @@ const PopularCategories = () => {
                   initial={false}
                 />
               </motion.div>
+              </Link>
             </motion.div>
           ))}
         </div>

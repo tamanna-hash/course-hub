@@ -36,7 +36,7 @@ const HowItWorks = () => {
       title: "Choose a Course",
       description: "Browse our extensive catalog and pick a course that perfectly aligns with your career goals and interests.",
       color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      bgColor: "bg-sky-50 to-bg-blue-900/20",
       iconColor: "text-blue-600 dark:text-blue-400",
     },
     {

@@ -45,7 +45,7 @@ const Instructors = ({ instructorsData = [] }) => {
     { gradient: "from-orange-500 to-red-500", bgGradient: "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20" },
     { gradient: "from-green-500 to-emerald-500", bgGradient: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20" },
     { gradient: "from-red-500 to-pink-500", bgGradient: "from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20" },
-    { gradient: "from-indigo-500 to-blue-500", bgGradient: "from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20" },
+    { gradient: "from-indigo-500 to-blue-500", bgGradient: "from-sky-50 to-blue-500 dark:from-indigo-900/20 dark:to-blue-900/100" },
     { gradient: "from-teal-500 to-cyan-500", bgGradient: "from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20" },
     { gradient: "from-yellow-500 to-orange-500", bgGradient: "from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20" }
   ];

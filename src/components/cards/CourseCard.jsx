@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function CourseCard({ course }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group border border-gray-100 dark:border-gray-700 h-80 flex flex-col">
       
-      {/* Image - Reduced height */}
-      <div className="relative h-36 overflow-hidden">
+      {/* Image - Fixed height */}
+      <div className="relative h-36 overflow-hidden flex-shrink-0">
         <img
           src={course.thumbnail}
           alt={course.title}
@@ -16,34 +16,36 @@ export default function CourseCard({ course }) {
         </span>
       </div>
 
-      {/* Content - Reduced padding */}
-      <div className="p-4">
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+      {/* Content - Flexible area */}
+      <div className="p-4 flex flex-col flex-1 min-h-0">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2 flex-shrink-0">
           {course.title}
         </h3>
 
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2 flex-1 min-h-0">
           {course.description}
         </p>
 
-        {/* Instructor - Reduced spacing */}
-        {course.instructor && (
-          <div className="flex items-center gap-2 mb-3">
-            <img
-              src={course.instructor.image || course.instructor.avatar || '/default-avatar.png'}
-              alt={course.instructor.name}
-              className="w-6 h-6 rounded-full object-cover"
-            />
-            <span className="text-xs text-gray-700 dark:text-gray-300">{course.instructor.name}</span>
-          </div>
-        )}
+        {/* Instructor - Fixed height */}
+        <div className="flex-shrink-0 mb-3">
+          {course.instructor && (
+            <div className="flex items-center gap-2">
+              <img
+                src={course.instructor.image || course.instructor.avatar || '/default-avatar.png'}
+                alt={course.instructor.name}
+                className="w-6 h-6 rounded-full object-cover"
+              />
+              <span className="text-xs text-gray-700 dark:text-gray-300">{course.instructor.name}</span>
+            </div>
+          )}
+        </div>
 
-        {/* Footer - Reduced spacing */}
-        <div className="flex items-center justify-between">
+        {/* Footer - Always at bottom */}
+        <div className="flex items-center justify-between flex-shrink-0 mt-auto pt-2">
           <span className="text-primary font-bold text-base">
             ৳{course.price}
           </span>
-          <Link href={`/courses/${course._id}`} className="btn btn-sm text-white btn-primary rounded-full text-xs px-3 py-1 hover:shadow-lg transition-shadow">
+          <Link href={`/courses/${course._id}`} className="btn btn-sm text-white btn-primary rounded-full text-xs px-3 py-1 hover:shadow-lg transition-shadow whitespace-nowrap">
             View Details
           </Link>
         </div>

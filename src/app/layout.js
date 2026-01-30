@@ -58,11 +58,11 @@ export default function RootLayout({ children }) {
   return (
     <NextAuthProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} antialiased`}>
+        <body className={`${inter.className} antialiased `}>
           <header>
             <Navbar />
           </header>
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen mt-17">{children}</main>
           <Footer />
           <BackToTop />
         </body>

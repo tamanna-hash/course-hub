@@ -46,7 +46,7 @@ const Testimonials = () => {
       testimonial: "CourseHub completely transformed my career! The hands-on projects and expert instructors helped me land my dream job at Google. The learning experience was incredible.",
       course: "Full Stack Web Development",
       gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20"
+      bgGradient: "from-blue-100 to-sky-50 "
     },
     {
       id: 2,
@@ -106,7 +106,7 @@ const Testimonials = () => {
       testimonial: "The React Native course was outstanding! Building real apps during the course gave me the portfolio I needed to land my job at Spotify. Highly recommended!",
       course: "Mobile App Development",
       gradient: "from-indigo-500 to-blue-500",
-      bgGradient: "from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20"
+      bgGradient: "from-sky-50 to-blue-100 dark:from-indigo-900/20 dark:to-blue-900/20"
     }
   ];
 

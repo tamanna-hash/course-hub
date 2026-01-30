@@ -27,7 +27,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar fixed top-0 max-w-11/12 mx-auto left-0 right-0 bg-base-100/90 z-50 w-full">
+   <div className="bg-base-100 fixed top-0 left-0 right-0 z-50 w-full">
+     <div className="navbar max-w-11/12 mx-auto ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-gray-700 dark:text-gray-300">
@@ -65,6 +66,7 @@ const Navbar = () => {
         <AuthButtons/>
       </div>
     </div>
+   </div>
   );
 };
 
