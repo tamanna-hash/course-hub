@@ -16,15 +16,22 @@ const Theme = () => {
   const applyTheme = (newTheme) => {
     const html = document.querySelector("html");
     
+    console.log("Applying theme:", newTheme); // Debug log
+    
     // For DaisyUI themes
     html.setAttribute("data-theme", newTheme === "dark" ? "dark" : "light");
     
     // For Tailwind dark mode
     if (newTheme === "dark") {
       html.classList.add("dark");
+      console.log("Added dark class to html"); // Debug log
     } else {
       html.classList.remove("dark");
+      console.log("Removed dark class from html"); // Debug log
     }
+    
+    console.log("HTML classes:", html.className); // Debug log
+    console.log("HTML data-theme:", html.getAttribute("data-theme")); // Debug log
     
     localStorage.setItem("theme", newTheme);
   };

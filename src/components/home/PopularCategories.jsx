@@ -87,7 +87,7 @@ const PopularCategories = () => {
       description: "Flutter, React Native, iOS & Android Apps",
       icon: FiSmartphone,
       gradient: "from-indigo-500 to-blue-500",
-      bgGradient: "from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20",
+      bgGradient: "from-sky-50 to-blue-500",
       iconColor: "text-indigo-600 dark:text-indigo-400",
       students: "7K+",
       courses: 60,

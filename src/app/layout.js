@@ -59,10 +59,10 @@ export default function RootLayout({ children }) {
     <NextAuthProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${inter.className} antialiased`}>
-          <header className="max-w-11/12 mx-auto">
+          <header>
             <Navbar />
           </header>
-          <main className="max-w-11/12 mx-auto mt-17 min-h-screen">{children}</main>
+          <main className="min-h-screen">{children}</main>
           <Footer />
           <BackToTop />
         </body>

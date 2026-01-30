@@ -240,7 +240,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative min-h-[70vh] sm:h-[70vh] mt-17 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 overflow-hidden flex items-center">
+    <section className="relative h-[70vh] mt-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden">
       {/* Background */}
       <AnimatedBackground />
 
@@ -255,7 +255,7 @@ export default function Banner() {
         <div className="w-full flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Heading */}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-bold text-base-content/90 dark:text-white mb-4 leading-tight"
             variants={itemVariants}
           >
             <motion.span animate={{ scale: [1, 1.02, 1] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
@@ -351,7 +351,7 @@ export default function Banner() {
                 >
                   {stat.number}
                 </motion.div>
-                <div className="text-gray-700 dark:text-gray-200 font-medium text-sm relative z-10">
+                <div className="text-base-content/70 font-medium text-sm relative z-10">
                   {stat.label}
                 </div>
               </motion.div>
