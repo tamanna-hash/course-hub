@@ -21,7 +21,7 @@ const Featured = ({ featuredCourses = [] }) => {
       },
     },
   };
-
+console.log(featuredCourses);
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
@@ -46,7 +46,6 @@ const Featured = ({ featuredCourses = [] }) => {
     ...course,
     ...gradients[index % gradients.length]
   }));
-
   return (
     <section className="py-20 relative bg-base-100 overflow-hidden">
       {/* Background Elements */}
@@ -223,7 +222,7 @@ const Featured = ({ featuredCourses = [] }) => {
 
                     {/* Enroll Button - At the bottom */}
                     <motion.a
-                      href={`/courses/${course.slug || course._id}`}
+                      href={`/courses/${course._id}`}
                       className={`w-full px-4 py-2 bg-gradient-to-r ${course.gradient} text-white rounded-lg font-medium text-sm hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-auto`}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}

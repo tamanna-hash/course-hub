@@ -6,7 +6,7 @@ import React from "react";
 const EnrollButton = ({ course }) => {
   const router = useRouter();
   const path = usePathname();
-  const isLogin = false;
+  const isLogin = true;
   const handleEnroll = () => {
     if (isLogin) {
       alert(course._id);
@@ -16,7 +16,7 @@ const EnrollButton = ({ course }) => {
   };
   // onClick={handleEnroll}
   return (
-    <button className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
+    <button onClick={handleEnroll} className="w-full py-3 rounded-full bg-primary text-white font-semibold hover:bg-accent transition">
       Enroll Now
     </button>
   );

@@ -96,7 +96,6 @@ export default async function Home() {
   const finalFeaturedCourses = featuredCourses.length > 0 
     ? featuredCourses 
     : courses.slice(0, 4);
-
   return (
     <div className="min-h-screen">
       <Banner />
