@@ -21,7 +21,7 @@ const Featured = ({ featuredCourses = [] }) => {
       },
     },
   };
-console.log(featuredCourses);
+// console.log(featuredCourses);
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {

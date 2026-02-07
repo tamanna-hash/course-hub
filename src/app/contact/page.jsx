@@ -4,12 +4,16 @@ const Contact = () => {
     return (
         <div className="min-h-screen  dark:bg-gray-900">
             {/* Hero Section */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 py-16">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="relative bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 py-20 pt-28 overflow-hidden">
+                {/* Subtle Background Elements */}
+                <div className="absolute top-20 left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-20 w-80 h-80 bg-white/3 rounded-full blur-3xl"></div>
+                
+                <div className="relative max-w-4xl mx-auto px-6 text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Contact Us
                     </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-xl text-white/80 leading-relaxed">
                         Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
                     </p>
                 </div>
@@ -19,56 +23,56 @@ const Contact = () => {
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Contact Form */}
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
+                        <h2 className="text-3xl font-bold text-base-content mb-6">Send us a Message</h2>
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    <label htmlFor="firstName" className="block text-sm font-medium text-base-content/80 mb-2">
                                         First Name
                                     </label>
                                     <input
                                         type="text"
                                         id="firstName"
                                         name="firstName"
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                                        className="w-full px-4 py-3 border border-base-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-base-100 text-base-content"
                                         placeholder="John"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    <label htmlFor="lastName" className="block text-sm font-medium text-base-content/80 mb-2">
                                         Last Name
                                     </label>
                                     <input
                                         type="text"
                                         id="lastName"
                                         name="lastName"
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                                        className="w-full px-4 py-3 border border-base-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-base-100 text-base-content"
                                         placeholder="Doe"
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                <label htmlFor="email" className="block text-sm font-medium text-base-content/80 mb-2">
                                     Email Address
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                                    className="w-full px-4 py-3 border border-base-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-base-100 text-base-content"
                                     placeholder="john@example.com"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                <label htmlFor="subject" className="block text-sm font-medium text-base-content/80 mb-2">
                                     Subject
                                 </label>
                                 <select
                                     id="subject"
                                     name="subject"
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                                    className="w-full px-4 py-3 border border-base-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-base-100 text-base-content"
                                 >
                                     <option value="">Select a subject</option>
                                     <option value="general">General Inquiry</option>
@@ -80,14 +84,14 @@ const Contact = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                <label htmlFor="message" className="block text-sm font-medium text-base-content/80 mb-2">
                                     Message
                                 </label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     rows={6}
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                                    className="w-full px-4 py-3 border border-base-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-base-100 text-base-content"
                                     placeholder="Tell us how we can help you..."
                                 ></textarea>
                             </div>
@@ -103,8 +107,8 @@ const Contact = () => {
 
                     {/* Contact Information */}
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h2>
-                        <p className="text-gray-600 dark:text-gray-300 mb-8">
+                        <h2 className="text-3xl font-bold text-base-content mb-6">Get in Touch</h2>
+                        <p className="text-base-content/70 mb-8">
                             We're here to help and answer any question you might have. We look forward to hearing from you.
                         </p>
 
@@ -117,9 +121,9 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
-                                    <p className="text-gray-600 dark:text-gray-300">support@coursehub.com</p>
-                                    <p className="text-gray-600 dark:text-gray-300">info@coursehub.com</p>
+                                    <h3 className="text-lg font-semibold text-base-content">Email</h3>
+                                    <p className="text-base-content/70">support@coursehub.com</p>
+                                    <p className="text-base-content/70">info@coursehub.com</p>
                                 </div>
                             </div>
 
@@ -131,9 +135,9 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h3>
-                                    <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
-                                    <p className="text-gray-600 dark:text-gray-300">Mon-Fri 9am-6pm EST</p>
+                                    <h3 className="text-lg font-semibold text-base-content">Phone</h3>
+                                    <p className="text-base-content/70">+1 (555) 123-4567</p>
+                                    <p className="text-base-content/70">Mon-Fri 9am-6pm EST</p>
                                 </div>
                             </div>
 
@@ -146,9 +150,9 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Office</h3>
-                                    <p className="text-gray-600 dark:text-gray-300">123 Learning Street</p>
-                                    <p className="text-gray-600 dark:text-gray-300">Education City, EC 12345</p>
+                                    <h3 className="text-lg font-semibold text-base-content">Office</h3>
+                                    <p className="text-base-content/70">123 Learning Street</p>
+                                    <p className="text-base-content/70">Education City, EC 12345</p>
                                 </div>
                             </div>
 
@@ -160,7 +164,7 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Follow Us</h3>
+                                    <h3 className="text-lg font-semibold text-base-content">Follow Us</h3>
                                     <div className="flex space-x-4 mt-2">
                                         <a href="#" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
                                             Facebook
@@ -177,9 +181,9 @@ const Contact = () => {
                         </div>
 
                         {/* FAQ Link */}
-                        <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Frequently Asked Questions</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        <div className="mt-8 p-6 bg-base-200 rounded-lg">
+                            <h3 className="text-lg font-semibold text-base-content mb-2">Frequently Asked Questions</h3>
+                            <p className="text-base-content/70 mb-4">
                                 Looking for quick answers? Check out our FAQ section for common questions and solutions.
                             </p>
                             <a 
@@ -194,8 +198,8 @@ const Contact = () => {
 
                 {/* Response Time Notice */}
                 <div className="mt-16 text-center bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">We'll Get Back to You Soon</h3>
-                    <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    <h3 className="text-2xl font-bold text-base-content mb-4">We'll Get Back to You Soon</h3>
+                    <p className="text-base-content/70 max-w-2xl mx-auto">
                         We typically respond to all inquiries within 24 hours during business days. 
                         For urgent matters, please call us directly at the number provided above.
                     </p>

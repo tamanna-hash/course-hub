@@ -149,12 +149,16 @@ const Blog = () => {
     return (
         <div className="min-h-screen  dark:bg-gray-900">
             {/* Hero Section */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 py-16">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="relative bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 py-20 pt-28 overflow-hidden">
+                {/* Subtle Background Elements */}
+                <div className="absolute top-20 left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-20 w-80 h-80 bg-white/3 rounded-full blur-3xl"></div>
+                
+                <div className="relative max-w-4xl mx-auto px-6 text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Our Blog
                     </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-xl text-white/80 leading-relaxed">
                         Insights, tutorials, and industry trends to help you stay ahead in your learning journey.
                     </p>
                 </div>

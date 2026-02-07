@@ -3,14 +3,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-// const NavLink = ({href,children}) => {
-//     const pathname=usePathname()
-//     return (
-//         <Link className={`${pathname.startsWith(href)&& "text-primary underline underline-offset-2"} font-medium`} href={href} >{children}</Link>
-//     );
-// };
-
-// export default NavLink;
 const NavLink = ({ href, children }) => {
   const pathname = usePathname();
 
@@ -21,7 +13,13 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className={`${isActive ? 'text-primary underline underline-offset-2' : ''} font-medium`}
+      className={`
+        px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300
+        ${isActive 
+          ? 'bg-white/20 text-white shadow-md backdrop-blur-sm' 
+          : 'text-white/80 hover:bg-white/10 hover:text-white'
+        }
+      `}
     >
       {children}
     </Link>

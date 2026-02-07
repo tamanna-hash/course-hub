@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
 export default async function CourseDetails({ params }) {
   const { id } = await params;
   const course = await getSingleCourse(id);
-  console.log(course);
+  // console.log(course);
   
   return (
     <div className="bg-base-100 dark:bg-gray-900 min-h-screen">
@@ -153,7 +153,7 @@ export default async function CourseDetails({ params }) {
                   label: "Duration", 
                   value: course.duration,
                   color: "from-blue-500 to-cyan-500",
-                  bgColor: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
+                  bgColor: "bg-base-100",
                   iconColor: "text-blue-600 dark:text-blue-400"
                 },
                 { 
@@ -161,7 +161,7 @@ export default async function CourseDetails({ params }) {
                   label: "Level", 
                   value: course.level,
                   color: "from-green-500 to-emerald-500",
-                  bgColor: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20",
+                  bgColor: "bg-base-100",
                   iconColor: "text-green-600 dark:text-green-400"
                 },
                 {
@@ -169,7 +169,7 @@ export default async function CourseDetails({ params }) {
                   label: "Rating",
                   value: course.rating,
                   color: "from-yellow-500 to-orange-500",
-                  bgColor: "from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20",
+                  bgColor: "bg-base-100",
                   iconColor: "text-yellow-600 dark:text-yellow-400"
                 },
                 { 
@@ -177,19 +177,19 @@ export default async function CourseDetails({ params }) {
                   label: "Students", 
                   value: `${course.students}+`,
                   color: "from-purple-500 to-pink-500",
-                  bgColor: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
+                  bgColor: "bg-base-100",
                   iconColor: "text-purple-600 dark:text-purple-400"
                 },
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`bg-gradient-to-br ${item.bgColor} rounded-2xl p-6 border border-white/50 dark:border-gray-600/50 backdrop-blur-sm hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all duration-300 group`}
+                  className={`${item.bgColor} rounded-2xl p-6 border border-base-300 backdrop-blur-sm hover:shadow-lg transition-all duration-300 group`}
                 >
                   <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm text-gray-600     mb-1">{item.label}</p>
-                  <p className="text-xl font-bold text-gray-900   ">
+                  <p className="text-sm text-base-content/60 mb-1">{item.label}</p>
+                  <p className="text-xl font-bold text-base-content">
                     {item.value}
                   </p>
                 </div>
@@ -197,8 +197,8 @@ export default async function CourseDetails({ params }) {
             </div>
 
             {/* What You'll Learn */}
-            <div className="bg-white dark:bg-gray-800  rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700">
-              <h2 className="text-2xl text-black font-bold  mb-6 flex items-center gap-3">
+            <div className="bg-base-100 rounded-2xl shadow-lg p-8 border border-base-300">
+              <h2 className="text-2xl font-bold text-base-content mb-6 flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
                   <IoCheckmarkCircle className="w-5 h-5 text-white" />
                 </div>
@@ -213,17 +213,17 @@ export default async function CourseDetails({ params }) {
                   "Understand practical implementation techniques",
                   "Develop problem-solving skills"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200">
+                  <div key={i} className="flex items-start gap-3 p-3 rounded-lg hover:bg-base-200 transition-colors duration-200">
                     <IoCheckmarkCircle className="w-5 h-5 text-green-500 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                    <span className="text-base-content/80">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Course Content */}
-            <div className="text-black bg-white rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700">
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+            <div className="bg-base-100 rounded-2xl shadow-lg p-8 border border-base-300">
+              <h2 className="text-2xl font-bold text-base-content mb-6 flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
                   <IoDocumentText className="w-5 h-5 text-white" />
                 </div>
@@ -237,18 +237,18 @@ export default async function CourseDetails({ params }) {
                   { title: "Advanced Techniques", lessons: 6, duration: "2h 45min" },
                   { title: "Final Project", lessons: 3, duration: "1h 30min" }
                 ].map((section, i) => (
-                  <div key={i} className="border border-gray-200 dark:border-gray-600 rounded-xl p-4 hover:shadow-md transition-shadow duration-200">
+                  <div key={i} className="border border-base-300 rounded-xl p-4 hover:shadow-md transition-shadow duration-200">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-semibold text-sm">
                           {i + 1}
                         </div>
                         <div>
-                          <h3 className="font-semibold  ">{section.title}</h3>
-                          <p className="text-sm text-gray-600 ">{section.lessons} lessons • {section.duration}</p>
+                          <h3 className="font-semibold text-base-content">{section.title}</h3>
+                          <p className="text-sm text-base-content/60">{section.lessons} lessons • {section.duration}</p>
                         </div>
                       </div>
-                      <IoPlayCircle className="w-6 h-6 text-gray-400  hover:text-blue-500 dark:hover:text-blue-400 cursor-pointer transition-colors duration-200" />
+                      <IoPlayCircle className="w-6 h-6 text-base-content/40 hover:text-blue-500 dark:hover:text-blue-400 cursor-pointer transition-colors duration-200" />
                     </div>
                   </div>
                 ))}
@@ -256,8 +256,8 @@ export default async function CourseDetails({ params }) {
             </div>
 
             {/* Instructor Section */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700">
-              <h2 className="text-2xl font-bold text-gray-900    mb-6">Meet Your Instructor</h2>
+            <div className="bg-base-100 rounded-2xl shadow-lg p-8 border border-base-300">
+              <h2 className="text-2xl font-bold text-base-content mb-6">Meet Your Instructor</h2>
               <div className="flex flex-col sm:flex-row items-start gap-6">
                 <div className="relative">
                   <img
@@ -270,15 +270,15 @@ export default async function CourseDetails({ params }) {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900    mb-2">
+                  <h3 className="text-xl font-bold text-base-content mb-2">
                     {course.instructor?.name}
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">{course.instructor?.title}</p>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  <p className="text-base-content/70 leading-relaxed mb-4">
                     Expert instructor with real-world experience in analytics and business intelligence. 
                     Passionate about teaching and helping students achieve their career goals.
                   </p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-600    ">
+                  <div className="flex flex-wrap gap-4 text-sm text-base-content/60">
                     <div className="flex items-center gap-1">
                       <IoPeople className="w-4 h-4" />
                       <span>10,000+ students taught</span>
@@ -296,14 +296,14 @@ export default async function CourseDetails({ params }) {
           {/* Right Sidebar */}
           <div className="space-y-6">
             {/* Pricing Card */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 sticky top-24">
+            <div className="bg-base-100 rounded-2xl shadow-lg p-6 border border-base-300 lg:sticky lg:top-24">
               {/* Price Section */}
               <div className="text-center mb-6">
                 <div className="flex justify-center items-baseline gap-3 mb-2">
                   <span className="text-4xl font-bold text-blue-600 dark:text-blue-400">
                     ৳{course.discountPrice}
                   </span>
-                  <span className="text-xl line-through text-gray-500    ">
+                  <span className="text-xl line-through text-base-content/50">
                     ৳{course.price}
                   </span>
                 </div>
@@ -319,8 +319,8 @@ export default async function CourseDetails({ params }) {
               </div>
 
               {/* Course Includes */}
-              <div className="border-t border-gray-200 dark:border-gray-600 pt-6">
-                <h4 className="font-bold text-gray-900    mb-4 flex items-center gap-2">
+              <div className="border-t border-base-300 pt-6">
+                <h4 className="font-bold text-base-content mb-4 flex items-center gap-2">
                   <IoShield className="w-5 h-5 text-blue-500 dark:text-blue-400" />
                   This course includes:
                 </h4>
@@ -333,7 +333,7 @@ export default async function CourseDetails({ params }) {
                     { icon: IoPeople, text: "Expert support" },
                     { icon: IoPlayCircle, text: "Mobile and TV access" }
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <li key={i} className="flex items-center gap-3 text-base-content/80">
                       <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
                         <item.icon className="w-3 h-3 text-white" />
                       </div>
@@ -354,29 +354,6 @@ export default async function CourseDetails({ params }) {
                     <p className="text-green-600 dark:text-green-300 text-xs">Full refund if not satisfied</p>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Related Courses */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
-              <h4 className="font-bold text-gray-900    mb-4">Students also bought</h4>
-              <div className="space-y-4">
-                {[1, 2, 3].map((item, i) => (
-                  <div key={i} className="flex gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer transition-colors duration-200">
-                    <div className="w-16 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex-shrink-0"></div>
-                    <div className="flex-1 min-w-0">
-                      <h5 className="font-medium text-gray-900    text-sm truncate">Related Course {i + 1}</h5>
-                      <p className="text-xs text-gray-600    ">By Expert Instructor</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <div className="flex items-center gap-1">
-                          <IoStar className="w-3 h-3 text-yellow-500" />
-                          <span className="text-xs text-gray-600    ">4.8</span>
-                        </div>
-                        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">৳1,999</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
