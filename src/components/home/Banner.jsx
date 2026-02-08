@@ -121,7 +121,7 @@ export default function Banner() {
             >
               <Link
                 href="/register"
-                className="px-6 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/20 transition-all duration-300"
+                className="px-6 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/20 transition-all duration-250"
               >
                 Get Started
               </Link>
