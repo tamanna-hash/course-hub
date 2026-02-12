@@ -1,5 +1,6 @@
 import { getSingleCourse } from "@/app/actions/server/course";
 import EnrollButton from "@/components/buttons/EnrollButton";
+import Image from "next/image";
 import { 
   IoStar, 
   IoTime, 
@@ -61,7 +62,7 @@ export default async function CourseDetails({ params }) {
     <div className="bg-base-100 dark:bg-gray-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-gray-900 dark:bg-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800"></div>
         
         {/* Subtle Background Elements */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-white/5 dark:bg-white/3 rounded-full blur-3xl"></div>
@@ -124,7 +125,9 @@ export default async function CourseDetails({ params }) {
             <div className="relative">
               <div className="relative bg-white/5 dark:bg-white/3 backdrop-blur-sm rounded-2xl p-6 border border-white/10 dark:border-white/5">
                 <div className="relative">
-                  <img
+                  <Image
+                  width={'200'}
+                  height={"200"}
                     src={course.thumbnail}
                     alt={course.title}
                     className="w-full h-64 object-cover rounded-xl"

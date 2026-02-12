@@ -58,7 +58,7 @@ const Theme = () => {
 
   return (
     <>
-      <div className="text-center mr-2 rounded-[50%] h-7 w-7 hover:text-white hover:shadow-none hover:bg-primary">
+      <div className="text-center text-sky-200 mr-2 rounded-[50%] h-7 w-7 hover:text-white hover:shadow-none hover:bg-primary">
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input
